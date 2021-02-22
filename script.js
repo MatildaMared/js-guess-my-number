@@ -14,7 +14,7 @@ const updateText = (query, text) => {
 document.querySelector(".check").addEventListener("click", function () {
 
     // Store user guess
-    const guess = Number(document.querySelector(".guess").value); 
+    const guess = Number(document.querySelector(".guess").value);
 
     if (!guess) {
         // When there is no input
