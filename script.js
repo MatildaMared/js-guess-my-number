@@ -1,6 +1,6 @@
 'use strict';
 
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
 let score = 20;
 
@@ -42,4 +42,26 @@ document.querySelector(".check").addEventListener("click", function () {
             document.querySelector('.score').textContent = 0;
         }
     }
+})
+
+// Restore the game
+document.querySelector(".again").addEventListener("click", function () {
+    
+    // Resetting background color
+    document.querySelector("body").style.backgroundColor = "mediumpurple";
+
+    // Resetting secret number and styles
+    secretNumber = Math.trunc(Math.random() * 20) + 1;
+    document.querySelector(".number").textContent = "?";
+    document.querySelector('.number').style.width = '15rem';
+
+    // Resetting score
+    score = 20;
+    document.querySelector(".score").textContent = 20;
+
+    // Resetting message
+    document.querySelector(".message").textContent = "Start guessing...";
+
+    // Resetting guess input field
+    document.querySelector(".guess").value = "";
 })
