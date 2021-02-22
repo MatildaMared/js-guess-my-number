@@ -19,7 +19,6 @@ document.querySelector(".check").addEventListener("click", function () {
     if (!guess) {
         // When there is no input
         updateText(".message", "😟 No number!");
-        // document.querySelector(".message").textContent = "😟 No number!";
 
     // Player wins
     } else if (guess === secretNumber) {
